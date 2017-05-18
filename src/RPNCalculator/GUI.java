@@ -4,11 +4,11 @@
 
 package RPNCalculator;
 
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.event.*;
-import javax.swing.text.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import RPNCalculator.*;
 
 /**
  * This class contains the GUI
@@ -35,7 +35,18 @@ public class GUI extends JFrame
     {
         public void actionPerformed(ActionEvent e)
         {
-
+            if (e.getActionCommand().equals("EXE"))
+            {
+                // This is where the RPN code should go
+            }
+            else if (e.getActionCommand().equals("C"))
+            {
+                field.setText("");
+            }
+            else
+            {
+                field.setText(field.getText() + e.getActionCommand());
+            }
         }
     }
 

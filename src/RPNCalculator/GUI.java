@@ -22,10 +22,10 @@ public class GUI extends JFrame
     JMenuItem menuItem;
     JMenuItem aboutmenuItem;
     final String[] buttonNames = {
-            "1 ", "2 ", "3 ", "C",
-            "4 ", "5 ", "6 ", "+ ",
-            "7 ", "8 ", "9 ", "- ",
-            "* ", "0 ", "/ ", "EXE"
+            "1", "2", "3", "C",
+            "4", "5", "6", " + ",
+            "7", "8", "9", " -",
+            " * ", "0", " / ", "EXE"
     };
 
     /**

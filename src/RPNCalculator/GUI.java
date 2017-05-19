@@ -40,10 +40,7 @@ public class GUI extends JFrame
             {
                 try {
                     field.setText(RPN.DoWork(field.getText()));
-                } catch (Exception err)
-                {
-
-                }
+                } catch (Exception err) {}
             }
             else if (e.getActionCommand().equals("C"))
             {

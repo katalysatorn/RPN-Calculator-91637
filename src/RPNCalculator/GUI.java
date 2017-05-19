@@ -22,7 +22,7 @@ public class GUI extends JFrame
     JMenuItem menuItem;
     JMenuItem aboutmenuItem;
     final String[] buttonNames = {
-            "1", "2", "3", "C",
+            "1", "2", "3", "_",
             "4", "5", "6", " + ",
             "7", "8", "9", " -",
             " * ", "0", " / ", "EXE"
@@ -37,11 +37,16 @@ public class GUI extends JFrame
         {
             if (e.getActionCommand().equals("EXE"))
             {
-                // This is where the RPN code should go
+                try {
+                    field.setText(RPN.DoWork(field.getText()).toString());
+                } catch (Exception err)
+                {
+
+                }
             }
-            else if (e.getActionCommand().equals("C"))
+            else if (e.getActionCommand().equals("_"))
             {
-                field.setText("");
+                field.setText(field.getText() + " ");
             }
             else
             {

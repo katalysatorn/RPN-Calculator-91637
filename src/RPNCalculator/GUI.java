@@ -20,11 +20,11 @@ public class GUI extends JFrame
     JMenuItem menuItem;
     JMenuItem aboutmenuItem;
     final String[] buttonNames = {
-            "1", "2", "3", "+",
-            "4", "5", "6", "-",
-            "7", "8", "9", "*",
-            "^", "0", "Space", "/",
-            "C", "", "", "EXE"
+            "1", "2", "3", "⟵",
+            "4", "5", "6", "+",
+            "7", "8", "9", "-",
+            "^", "0", "Space", "*",
+            "C", "", "EXE", "/"
 
 
     };
@@ -49,6 +49,10 @@ public class GUI extends JFrame
             else if (e.getActionCommand().equals("Space"))
             {
                 field.setText(field.getText() + " ");
+            }
+            else if (e.getActionCommand().equals("⟵"))
+            {
+                field.setText(field.getText().replaceFirst(".$",""));
             }
             else
             {

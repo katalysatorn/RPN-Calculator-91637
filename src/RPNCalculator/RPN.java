@@ -10,7 +10,7 @@ public class RPN
     public static String DoWork(String expr) throws ArithmeticException, EmptyStackException
     {
         Stack<Double> stack = new Stack<>();
-        String ans = "err";
+        String ans;
 
         for (String token : expr.split("\\s+"))
         {

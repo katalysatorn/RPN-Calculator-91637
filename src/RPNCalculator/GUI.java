@@ -8,7 +8,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import RPNCalculator.*;
 
 /**
  * This class contains the GUI
@@ -22,10 +21,13 @@ public class GUI extends JFrame
     JMenuItem menuItem;
     JMenuItem aboutmenuItem;
     final String[] buttonNames = {
-            "1", "2", "3", "_",
-            "4", "5", "6", " + ",
-            "7", "8", "9", " -",
-            " * ", "0", " / ", "EXE"
+            "1", "2", "3", "+",
+            "4", "5", "6", "-",
+            "7", "8", "9", "*",
+            "^", "0", "Space", "/",
+            "(", ")", "C", "EXE"
+
+
     };
 
     /**
@@ -44,7 +46,11 @@ public class GUI extends JFrame
 
                 }
             }
-            else if (e.getActionCommand().equals("_"))
+            else if (e.getActionCommand().equals("C"))
+            {
+                field.setText("");
+            }
+            else if (e.getActionCommand().equals("Space"))
             {
                 field.setText(field.getText() + " ");
             }
@@ -64,7 +70,7 @@ public class GUI extends JFrame
         {
             if (e.getActionCommand().equals("About"))
             {
-                JOptionPane.showMessageDialog(menuItem, "This is a basic RPN Calculator\n\nVersion 0.1");
+                JOptionPane.showMessageDialog(menuItem, "This is a basic RPN Calculator\n\nVersion 0.2");
             }
         }
     }
@@ -85,7 +91,7 @@ public class GUI extends JFrame
         menu.add(aboutmenuItem);
 
         JPanel buttons = new JPanel();
-        buttons.setLayout(new GridLayout(4,4));
+        buttons.setLayout(new GridLayout(5,4));
 
         for (int i = 0; i < buttonNames.length; i++)
         {
@@ -97,6 +103,7 @@ public class GUI extends JFrame
         add(buttons, "Center");
 
         field = new JTextField();
+        field.setEditable(false);
         add(field, "North");
 
         this.pack();

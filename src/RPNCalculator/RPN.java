@@ -1,10 +1,10 @@
-package RPNCalculator;
-
-import java.util.*;
-
 /**
  * Created by katalysatorn on 18/5/17.
  */
+
+package RPNCalculator;
+import java.util.*;
+
 public class RPN
 {
     public static String DoWork(String expr) throws ArithmeticException, EmptyStackException

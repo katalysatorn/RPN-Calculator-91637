@@ -14,7 +14,6 @@ import java.awt.event.ActionListener;
  */
 public class GUI extends JFrame
 {
-    JPanel area;
     JTextField field;
     JMenuBar menuBar;
     JMenu menu;
@@ -25,7 +24,7 @@ public class GUI extends JFrame
             "4", "5", "6", "-",
             "7", "8", "9", "*",
             "^", "0", "Space", "/",
-            "(", ")", "C", "EXE"
+            "C", "", "", "EXE"
 
 
     };

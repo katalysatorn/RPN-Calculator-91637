@@ -7,7 +7,7 @@ import java.util.*;
  */
 public class RPN
 {
-    public static Stack DoWork(String expr) throws ArithmeticException, EmptyStackException
+    public static String DoWork(String expr) throws ArithmeticException, EmptyStackException
     {
         Stack<Double> stack = new Stack<>();
 
@@ -37,6 +37,6 @@ public class RPN
                     break;
             }
         }
-        return stack;
+        return stack.toString();
     }
 }

@@ -38,7 +38,7 @@ public class GUI extends JFrame
             if (e.getActionCommand().equals("EXE"))
             {
                 try {
-                    field.setText(RPN.DoWork(field.getText()).toString());
+                    field.setText(RPN.DoWork(field.getText()));
                 } catch (Exception err)
                 {
 

@@ -10,6 +10,7 @@ public class RPN
     public static String DoWork(String expr) throws ArithmeticException, EmptyStackException
     {
         Stack<Double> stack = new Stack<>();
+        String ans = "err";
 
         for (String token : expr.split("\\s+"))
         {
@@ -37,6 +38,10 @@ public class RPN
                     break;
             }
         }
-        return stack.toString();
+        ans = stack.toString();
+        ans = ans.replace("[", "");
+        ans = ans.replace("]", "");
+
+        return ans;
     }
 }

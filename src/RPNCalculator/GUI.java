@@ -69,7 +69,7 @@ public class GUI extends JFrame
         {
             if (e.getActionCommand().equals("About"))
             {
-                JOptionPane.showMessageDialog(menuItem, "This is a basic RPN Calculator\n\nVersion 0.2");
+                JOptionPane.showMessageDialog(menuItem, "This is a basic RPN Calculator\n\nVersion 0.3");
             }
         }
     }

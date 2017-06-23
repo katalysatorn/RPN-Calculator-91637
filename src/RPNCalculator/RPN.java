@@ -7,12 +7,12 @@ import java.util.*;
 
 public class RPN
 {
-    public static String DoWork(String expr) throws ArithmeticException, EmptyStackException
+    public static String DoWork(String expression) throws ArithmeticException, EmptyStackException
     {
         Stack<Double> stack = new Stack<>();
         String ans;
 
-        for (String token : expr.split("\\s+"))
+        for (String token : expression.split("\\s+"))
         {
             switch (token)
             {

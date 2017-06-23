@@ -44,4 +44,16 @@ public class RPN
 
         return ans;
     }
+    public static void main(String[] args)
+    {
+        if(args.length > 0)
+        {
+            System.out.println(DoWork(args[0]));
+        }
+        else
+        {
+            System.out.println("No arguments supplied");
+            System.out.println("This class needs an expression as an argument.");
+        }
+    }
 }

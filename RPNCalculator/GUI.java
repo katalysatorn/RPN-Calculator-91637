@@ -68,7 +68,7 @@ public class GUI extends JFrame {
                 JOptionPane.showMessageDialog(
                     menuItem,
                     "This is a basic RPN Calculator\n" +
-                    "If you input nothing or get an error in the RPN, it will start a new GUI." +
+                    "If you input nothing or get an error in the RPN, it will start a new GUI.\n" +
                     "This is intended behaviour; \"It's not a bug, its a feature.\"\n\n" +
                     "Version 0.3"
                 );

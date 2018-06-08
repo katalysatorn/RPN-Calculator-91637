@@ -1,5 +1,8 @@
 /**
- * Created by katalysatorn on 18/5/17.
+ * Code for the RPN function of the program
+ * 
+ * @author katalysatorn, Blair Burton <blair.burton@outlook.com>
+ * @since 1.0
  */
 
 package RPNCalculator;
@@ -7,7 +10,7 @@ import java.util.*;
 
 public class RPN
 {
-    public static String DoWork(String expression) throws ArithmeticException, EmptyStackException
+    public static String DoWork (String expression) throws ArithmeticException, EmptyStackException
     {
         Stack<Double> stack = new Stack<>();
         String ans;
@@ -44,7 +47,8 @@ public class RPN
 
         return ans;
     }
-    public static void main(String[] args)
+
+    public static void main (String[] args)
     {
         if(args.length > 0)
         {

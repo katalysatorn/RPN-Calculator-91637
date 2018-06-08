@@ -1,5 +1,8 @@
 /**
- * Created by katalysatorn on 18/5/17.
+ * Contains the main GUI information
+ * 
+ * @author katalysatorn, Blair Burton <blair.burton@outlook.com>
+ * @since 1.0
  */
 
 package RPNCalculator;
@@ -13,11 +16,15 @@ import java.awt.event.ActionListener;
  */
 public class GUI extends JFrame
 {
+    // Create serialVersionUID
+    private static final long serialVersionUID = 1L;
+
     JTextField field;
     JMenuBar menuBar;
     JMenu menu;
-    JMenuItem menuItem;
-    JMenuItem aboutmenuItem;
+    JMenuItem menuItem, aboutmenuItem;
+
+    // Array containing the items for the buttons
     final String[] buttonNames = {
             "1", "2", "3", "⟵",
             "4", "5", "6", "+",
@@ -33,7 +40,7 @@ public class GUI extends JFrame
      */
     class buttonListener implements ActionListener
     {
-        public void actionPerformed(ActionEvent e)
+        public void actionPerformed (ActionEvent e)
         {
             if (e.getActionCommand().equals("EXE"))
             {
@@ -67,7 +74,7 @@ public class GUI extends JFrame
      */
     class MenuListener implements ActionListener
     {
-        public void actionPerformed(ActionEvent e)
+        public void actionPerformed (ActionEvent e)
         {
             if (e.getActionCommand().equals("About"))
             {
@@ -75,10 +82,12 @@ public class GUI extends JFrame
             }
         }
     }
-    public GUI()
+
+    public GUI ()
     {
         this.getContentPane().setLayout(new BorderLayout());
-        this.setTitle("RPN Calculator");
+
+        this.setTitle("RPN Calculator AS91637");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         menuBar = new JMenuBar();
@@ -94,6 +103,7 @@ public class GUI extends JFrame
         JPanel buttons = new JPanel();
         buttons.setLayout(new GridLayout(5,4));
 
+        // Set the buttons to the correct place
         for (int i = 0; i < buttonNames.length; i++)
         {
             JButton button = new JButton(buttonNames[i]);

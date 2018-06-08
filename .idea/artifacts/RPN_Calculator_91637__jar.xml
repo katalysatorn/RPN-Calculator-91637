@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="RPN-Calculator-91637-:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/RPN_Calculator_91637__jar</output-path>
-    <root id="archive" name="RPN-Calculator-91637-.jar">
-      <element id="module-output" name="RPN-Calculator-91637-" />
-    </root>
-  </artifact>
-</component>

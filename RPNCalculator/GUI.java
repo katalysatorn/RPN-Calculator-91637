@@ -4,8 +4,8 @@
  * @author katalysatorn, Blair Burton <blair.burton@outlook.com>
  * @since 1.0
  */
-
 package RPNCalculator;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -14,8 +14,7 @@ import java.awt.event.ActionListener;
 /**
  * This class contains the GUI
  */
-public class GUI extends JFrame
-{
+public class GUI extends JFrame {
     // Create serialVersionUID
     private static final long serialVersionUID = 1L;
 
@@ -26,44 +25,35 @@ public class GUI extends JFrame
 
     // Array containing the items for the buttons
     final String[] buttonNames = {
-            "1", "2", "3", "⟵",
-            "4", "5", "6", "+",
-            "7", "8", "9", "-",
-            "^", "0", "EXE", "*",
-            "C", "Space", ".", "/"
-
-
+        "1", "2", "3", "⟵",
+        "4", "5", "6", "+",
+        "7", "8", "9", "-",
+        "^", "0", "EXE", "*",
+        "C", "Space", ".", "/"
     };
 
     /**
      * This class listens for each button press and does the correct thing depending on what button
      */
-    class buttonListener implements ActionListener
-    {
-        public void actionPerformed (ActionEvent e)
-        {
-            if (e.getActionCommand().equals("EXE"))
-            {
+    class buttonListener implements ActionListener {
+        public void actionPerformed (ActionEvent e) {
+            if (e.getActionCommand().equals("EXE")) {
                 try {
                     field.setText(RPN.DoWork(field.getText()));
                 } catch (Exception err) {
-                    GUI gui = new GUI();
+                    new GUI();
                 }
             }
-            else if (e.getActionCommand().equals("C"))
-            {
+            else if (e.getActionCommand().equals("C")) {
                 field.setText("");
             }
-            else if (e.getActionCommand().equals("Space"))
-            {
+            else if (e.getActionCommand().equals("Space")) {
                 field.setText(field.getText() + " ");
             }
-            else if (e.getActionCommand().equals("⟵"))
-            {
+            else if (e.getActionCommand().equals("⟵")) {
                 field.setText(field.getText().replaceFirst(".$",""));
             }
-            else
-            {
+            else {
                 field.setText(field.getText() + e.getActionCommand());
             }
         }
@@ -72,19 +62,21 @@ public class GUI extends JFrame
     /**
      * This class listens for the menu buttons and returns the appropriate subwindow
      */
-    class MenuListener implements ActionListener
-    {
-        public void actionPerformed (ActionEvent e)
-        {
-            if (e.getActionCommand().equals("About"))
-            {
-                JOptionPane.showMessageDialog(menuItem, "This is a basic RPN Calculator\nIf you input nothing or get an error in the RPN, it will start a new GUI.\nThis is intended behaviour; \"It's not a bug, its a feature.\"\n\nVersion 0.3");
+    class MenuListener implements ActionListener {
+        public void actionPerformed (ActionEvent e) {
+            if (e.getActionCommand().equals("About")) {
+                JOptionPane.showMessageDialog(
+                    menuItem,
+                    "This is a basic RPN Calculator\n" +
+                    "If you input nothing or get an error in the RPN, it will start a new GUI." +
+                    "This is intended behaviour; \"It's not a bug, its a feature.\"\n\n" +
+                    "Version 0.3"
+                );
             }
         }
     }
 
-    public GUI ()
-    {
+    public GUI () {
         this.getContentPane().setLayout(new BorderLayout());
 
         this.setTitle("RPN Calculator AS91637");
@@ -104,8 +96,7 @@ public class GUI extends JFrame
         buttons.setLayout(new GridLayout(5,4));
 
         // Set the buttons to the correct place
-        for (int i = 0; i < buttonNames.length; i++)
-        {
+        for (int i = 0; i < buttonNames.length; i++) {
             JButton button = new JButton(buttonNames[i]);
             button.addActionListener(new buttonListener());
             buttons.add(button);

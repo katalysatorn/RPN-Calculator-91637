@@ -6,7 +6,7 @@
  */
 import RPNCalculator.*;
 
-public class Calculator
+public class Program
 {
     public static void main(String[] args)
     {

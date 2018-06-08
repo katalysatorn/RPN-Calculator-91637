@@ -1,5 +1,8 @@
 /**
- * Created by katalysatorn on 18/5/17.
+ * Creates the UI for the calculator
+ * 
+ * @author katalysatorn, Blair Burton <blair.burton@outlook.com>
+ * @since 1.0
  */
 import RPNCalculator.*;
 
@@ -7,6 +10,7 @@ public class Calculator
 {
     public static void main(String[] args)
     {
-        GUI gui = new GUI();
+        // Open the calculators GUI
+        new GUI();
     }
 }
